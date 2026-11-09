@@ -1,7 +1,8 @@
-import  java.sql.*;
+import java.sql.*;
+
 public class DeleteData {
-    static void main(String[] args) {
-        try{
+    public static void main(String[] args) {
+        try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/student_db",
@@ -12,8 +13,11 @@ public class DeleteData {
             String sql = "delete from employee where id = 102";
             stmp.executeUpdate(sql);
             System.out.println("Data Deleted Successfully");
+
+            stmp.close();
+            con.close();
         } catch (Exception e) {
-            System.out.print("Error Occurs : "+e);
+            System.out.print("Error Occurs : " + e);
         }
     }
 }

@@ -20,11 +20,10 @@ public class InsertData {
 
             // Step 4: Write INSERT query
             String sql = "insert into employee values (103,'Gotham',30)";
-            System.out.print("123");
+
             // Step 5: Execute Query
             stmt.executeUpdate(sql);
-            System.out.print("456");
-            System.out.print("\nData inserted successfully");
+            System.out.println("Data inserted successfully");
 
             // Step 6: Close Connection
             stmt.close();

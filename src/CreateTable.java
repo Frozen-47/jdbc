@@ -21,11 +21,9 @@ public class CreateTable {
             // Step 4: Write CREATE query
             String sql = "CREATE TABLE IF NOT EXISTS employee (id INT PRIMARY KEY,name VARCHAR(50), age INT)";
 
-            System.out.print("123");
             // Step 5: Execute Query
             stmt.executeUpdate(sql);
-            System.out.println("456");
-            System.out.print("Table Created successfully");
+            System.out.println("Table Created successfully");
 
             // Step 6: Close Connection
             stmt.close();
